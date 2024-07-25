@@ -1,21 +1,22 @@
 import React from "react";
 import "./about.css";
 import theme_pattern from "/src/assets/theme_pattern.svg";
+import   about_img  from '/public/about.jpeg'
 
 const About = () => {
   return (
     <div id="about" className="about flex relative">
-      <div className="about-tittle relative">
-        <h1 className="py-[25px] font-bold text-[80px]">About me</h1>
+      <div className="about-tittle relative ">
+        <h2 className=" text-[6vw] font-bold whitespace-nowrap  ">About me</h2>
         <img
-          className="absolute bottom-0 -right-8 top-14 z-[-1]"
-          src={theme_pattern}
-          alt=""
-        />
+  src={theme_pattern}
+  alt=""
+  className="theme absolute top-7 right-0 z-[-2] sm:right-0 sm:top-0 md:right-0 md:top-5 lg:right-1 lg:top-8"
+/>
       </div>
       <div className="about-sec flex gap-[55px]">
         <div className="about-left">
-          <img  className="aboutImg scale-[1.8]" src="/public/about.jpeg" alt="" />
+          <img  className="aboutImg scale-[1.8]" src={about_img } alt="" />
         </div>
         <div className="about-right flex flex-col gap-[65px]">
           <div className="paragraph flex flex-col gap-[12px] font-medium text-[18px]  ">
@@ -52,11 +53,11 @@ const About = () => {
       </div>
 
       <div className="about-achievements flex items-center justify-around w-[100%] mb-[80px] transition 0.5s ">
-        <div className="about-achievement flex flex-col items-center hover:scale-[1.]   ">
-          <h1 className="font-bold mb-2">2+</h1>
-          <p className="font-medium">YEARS OF EXPERIENCE</p>
+        <div className="about-achievement flex flex-col items-center  hover:scale-[1.1]">
+          <h1 className="font-bold mb-2 hover:scale-[1.1] ">1+</h1>
+          <p className="font-medium hover:scale-[1.1] ">YEARS OF EXPERIENCE</p>
         </div>
-        <hr className="w-[2px] h-[90px] bg-white mx-4" />
+        <hr className="w-[2px] h-[90px] bg-white " />
         <div className="about-achievement flex flex-col items-center hover:scale-[1.1]  ">
           <h1 className="font-bold mb-2">5+</h1>
           <p className="font-medium">PROJECTS COMPLETED</p>

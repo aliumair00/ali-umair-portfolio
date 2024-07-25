@@ -4,12 +4,13 @@ import { RiLinkedinBoxFill } from "react-icons/ri";
 import { BsGithub } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import profile_img from '/public/ali.jpeg'
 
 const Hero = () => {
   return (
     <div id='home' className='hero flex items-center flex-col'>
       <div className='profile'>
-        <img className='img h-full w-full mt-[20px]' src="/public/ali.jpeg" alt=""/>
+        <img className='img h-full w-full mt-[20px]' src={profile_img} alt=""/>
       </div>
       <div className='socialicon mt-[50px] flex items-center gap-[10px]'>
         <div className='linkedin h-[45px] w-[45px] rounded-full flex items-center justify-center'>

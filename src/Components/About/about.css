@@ -46,63 +46,60 @@
   
   /* Responsive styles */
   @media (max-width: 768px) {
-    .about {
-      margin: 10vh 2vw;
-      gap: 40px;
-    }
-    .about-left {
-      height: 250px;
-      width: 100%;
-    }
-    .aboutImg {
-      /* object-fit: cover;
-      object-position: center;
-      scale: 1; */
-      display: none;
-    }
-    .about-sec {
-        margin-top: -33vh;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-    }
-    .about-right {
-      gap: 30px;
-    }
-    .paragraph p{
-      font-size: 16px;
-      text-align: center;
+      .about {
+        margin: 50px 20px;
+        gap: 40px;
+        align-items: start;
+      }
+      .about-tittle h2{
+        font-size: 45px;
+        padding: 0;
+        margin-left:10px;
+      }
+      .about-tittle img{
+        width: 100px;
+        right: 0;
+      }
+      .about-left {
+        display: none;
+      }
+      .about-sec{
+        flex-direction: column;
+        gap: 20px;
+      }
+      .about-right {
+        gap: 20px;
+      }
+      .paragraph p{
+        font-size: 16px;
+        text-align: center;
+      }
+      .about-skills {
+        gap: 10px;
+        padding-right: 0;
+        margin-left:3vw
+      }
+      .about-skills hr{
+        width:inherit
+        
+      }
+      .about-skill {
+        gap: 20px;
+      }
+      .about-skill p {
+        font-size: 16px;
       
+      }
+      
+      .about-achievement{
+        margin-top: 8vw;
+        margin-right:4vw;
+       justify-content: space-between; 
+      }
+      .about-achievement p{
+        margin-left:5vh;
+        font-size:16px;
+      }
     }
-    
-    .about-skills {
-      gap: 10px;
-      padding-right: 0;
-    }
-    .about-skill {
-      gap: 20px;
-    }
-    .about-skill p {
-      font-size: 16px;
-    }
-    .about-achievements {
-      display: flex;
-      aligin-item:center;
-      justify-content: center;
-      gap: 50px;
-      margin-top: 40px;
-    }
-    .about-achievement h1 {
-      font-size: 30px;
-      margin-right:40px ;
-    }
-    .about-achievement p {
-      font-size: 16px;
-    }
-    .about-achievement hr {
-      width: 80%;
-      height: 2px;
-      background: #DF8908;
-    }
-  }
+  
   

@@ -24,14 +24,24 @@
 }
 
 @media(max-width:768px) {
-
-    .link-sec{
-        display: flex;
-        flex-direction: column;  
+    .getInTouch{
+        align-items: start;
+    }
+    .git-tittle h1{
+        font-size: 55px;
+        font-weight:700;
     }
     .theme{
         display: none;
     }
+    .link-sec{
+        display: flex;
+        flex-direction: column;
+        margin-right:0vw ;
+
+
+    }
+
     .link-right{
         /* display: flex;
     flex-direction: column;
@@ -44,26 +54,58 @@
     }
     .contact-submit{
         white-space: nowrap;
-        
+
     }
     .lastPart{
+        aligin-item:center;
         flex-direction: column;
         gap: 8px;
         margin-bottom:-32px ;
     }
     .lastPart p{
         margin-top: 8px;
-        font-size: 19px;
+        font-size: 18px;
+        white-space: nowrap;
+
+    }
+    .last-left{
+        margin-right: 40vw;
     }
     .lastPart .last-right{
         margin-right: 22px;
-        
+
     }
     .ft-last{
         flex-direction: column-reverse;
         white-space: nowrap;
         margin-left: 15px;
     }
-    
+    .last-right {
+     /* border:4px solid white; */
+     margin-left:-38vw
+    }
+    .contact-right{
+        margin-top:40px;
+    }
+    .talk{
+        margin-bottom:20px;
+    }
+    .border{
+        margin-top:-35px;
+        width: 125%;
+    }
+    .picon{
+        height: 50px;
+        width:50%;
+    }
+    .rights{
+        /* border:4px solid white; */
+        margin-top:-40px;
+      }
+      .link{
+        font-size:13px;
+        margin-top:-28px;
+      }
+
 }
 

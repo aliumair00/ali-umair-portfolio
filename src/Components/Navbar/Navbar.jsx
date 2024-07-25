@@ -19,6 +19,11 @@ const Navbar = () => {
     document.body.style.overflow = "auto";
   };
 
+  const handleMenuItemClick = (section) => {
+    setMenu(section);
+    menuClose();
+  };
+
   return (
     <div className='navbar flex items-center justify-between relative'>
       <h1 className='logo font-bold text-[3.5vw] whitespace-nowrap'>Ali Umair</h1>
@@ -27,25 +32,25 @@ const Navbar = () => {
         <img src={menu_close} onClick={menuClose} alt='' className='nav-mob-close' />
         <li>
           <AnchorLink href="#home">
-            <p onClick={() => setMenu("home")} className='whitespace-nowrap'>Home</p>
+            <p onClick={() => handleMenuItemClick("home")} className='whitespace-nowrap'>Home</p>
           </AnchorLink>
           {menu === "home" ? <img src={Underline} alt="underline" /> : <></>}
         </li>
         <li>
           <AnchorLink href="#about" offset={50}>
-            <p onClick={() => setMenu("about")} className='whitespace-nowrap'>About me</p>
+            <p onClick={() => handleMenuItemClick("about")} className='whitespace-nowrap'>About me</p>
           </AnchorLink>
           {menu === "about" ? <img src={Underline} alt="underline" /> : <></>}
         </li>
         <li>
           <AnchorLink href="#work" offset={50}>
-            <p onClick={() => setMenu("work")} className='whitespace-nowrap'>Portfolio</p>
+            <p onClick={() => handleMenuItemClick("work")} className='whitespace-nowrap'>Portfolio</p>
           </AnchorLink>
           {menu === "work" ? <img src={Underline} alt="underline" /> : <></>}
         </li>
         <li>
           <AnchorLink href="#contact" offset={50}>
-            <p onClick={() => setMenu("contact")} className='whitespace-nowrap'>Contact</p>
+            <p onClick={() => handleMenuItemClick("contact")} className='whitespace-nowrap'>Contact</p>
           </AnchorLink>
           {menu === "contact" ? <img src={Underline} alt="underline" /> : <></>}
         </li>

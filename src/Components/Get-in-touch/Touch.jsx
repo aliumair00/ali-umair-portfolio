@@ -37,7 +37,7 @@ const Touch = () => {
   return (
     <div id='contact' className='getInTouch  flex flex-col gap-[65px]  mt-[18vh] mb-[18vh] ml-[10vw] mr-[10vw] relative '>
         <div className='git-tittle flex  items-center justify-center  relative     '  >
-            <h1 className='text-[70px]  font-bold  whitespace-nowrap' >Get in touch</h1>
+            <h1 className=' get text-[70px]  font-bold  whitespace-nowrap' >Get in touch</h1>
             <img  className='theme  w-[170px] absolute top-[5vh] right-[47vh] z-[-2]  '  src={theme_pattern} alt="" />
         </div>
         <div  className='link-sec flex gap-[5vw] ml-7 ' >
@@ -72,26 +72,26 @@ const Touch = () => {
             </div>
         </div>
         <div className='lastPart relative flex items-center justify-between ' >
-                <div className='last-left relative   sm:ml-[-5vh] ' >
+                <div className='last-left relative  ' >
                     <h1 className='text-[55px] font-bold ' > Ali</h1>
                     <img src={theme_pattern} alt="" className=' h-[5vh] absolute top-8 left-1 z-[-2] '  />
                 <p className='font-medium  text-[16px]  ' >I am a MERN STACK Developer from pakistan. </p>
                 </div>
                 <div className='last-right flex items-center gap-[2vw] justify-center mt-[18px]' >
-                    <div className='  bg-[#32323B]  border flex items-center gap-4 px-4 py-4 rounded-full '>
+                    <div className=' picon   bg-[#32323B]  border flex items-center gap-4 px-4 py-4 rounded-full '>
                     <IoPersonAddOutline className='text-2xl text-gray-300 '/>
                     <input type="mail" name='mail' placeholder='Enter Your Mail' className='bg-transparent outline-none '  />
                      </div>
                 <button  className=' px-[35px] py-[15px] mb-5 bg-gradient-to-r from-[#DA7C25] to-[#B923E1] rounded-[30px] items-center hover:scale-[1.05] duration-300  text-[15px] ' >Subscribe</button>
                 </div>
             </div>
-            <div  className='footer mb-[-10vh] ' >
+            <div  className='footer  mb-[-10vh] ' >
                 <div className='border'  ></div>
                 <div className='ft-last flex item-center justify-between  ' >
                     <div  className='rights  mt-11 ' >
-                        <h2 className='sm:mt-[-14px]' >© 2024 Ali Umair. All rights reserved.</h2>
+                        <h2 className='rights' >© 2024 Ali Umair. All rights reserved.</h2>
                     </div>
-                    <div className='flex gap-[3vw] items-center mt-7' >
+                    <div className=' link flex gap-[3vw] items-center mt-7' >
                        <div><a href="">Term of Services</a></div> 
                        <div><a href="">Privacy Policy</a></div> 
                        <div><a href="">Privacy Policy</a></div> 
