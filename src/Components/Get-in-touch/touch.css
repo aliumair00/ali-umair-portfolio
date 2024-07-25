@@ -42,12 +42,13 @@
 
     }
 
-    .link-right{
+    .link-right input{
         /* display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: start;
     width: 100%; */
+    width: 300%;
     }
     .textArea{
         white-space: nowrap;
@@ -57,7 +58,7 @@
 
     }
     .lastPart{
-        aligin-item:center;
+        aligin-item:start;
         flex-direction: column;
         gap: 8px;
         margin-bottom:-32px ;
@@ -106,6 +107,9 @@
         font-size:13px;
         margin-top:-28px;
       }
-
-}
+      .footer {
+        align-items: start;
+           }
+        
+        }
 

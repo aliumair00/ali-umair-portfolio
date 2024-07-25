@@ -11,7 +11,7 @@ const About = () => {
         <img
   src={theme_pattern}
   alt=""
-  className="theme absolute top-7 right-0 z-[-2] sm:right-0 sm:top-0 md:right-0 md:top-5 lg:right-1 lg:top-8"
+  className=" absolute top-9 right-0 z-[-3] "
 />
       </div>
       <div className="about-sec flex gap-[55px]">
@@ -32,7 +32,7 @@ const About = () => {
               each project.
             </p>
           </div>
-          <div className="about-skills flex flex-col -mt-5 gap-[12px] pr-36">
+          <div className="about-skills flex flex-col -mt-5 gap-[12px] ">
             <div className="about-skill relative transition 0.3s hover:scale-[1.05] ">
               <p>HTML & CSS</p> <hr style={{ width: "80%" }} />
             </div>
@@ -43,7 +43,7 @@ const About = () => {
               <p>React.js</p> <hr style={{ width: "65%" }} />
             </div>
             <div className="about-skill relative transition 0.3s hover:scale-[1.05]  ">
-              <p>Express.js</p> <hr style={{ width: "60%" }} />
+              <p>Express.js</p> <hr style={{ width: "100%" }} />
             </div>
             <div className="about-skill relative  transition 0.3s hover:scale-[1.05]  ">
               <p>Node.js</p> <hr style={{ width: "60%" }} />

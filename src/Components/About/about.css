@@ -43,7 +43,7 @@
     color: transparent;
     font-size: 45px;
   }
-  
+
   /* Responsive styles */
   @media (max-width: 768px) {
       .about {
@@ -52,13 +52,15 @@
         align-items: start;
       }
       .about-tittle h2{
-        font-size: 45px;
+        font-size: 40px;
         padding: 0;
         margin-left:10px;
       }
       .about-tittle img{
         width: 100px;
-        right: 0;
+        right: 0px;
+        top:22px;
+        z-index: -3;
       }
       .about-left {
         display: none;
@@ -80,26 +82,27 @@
         margin-left:3vw
       }
       .about-skills hr{
-        width:inherit
-        
+        width:100%;
+
       }
       .about-skill {
         gap: 20px;
       }
       .about-skill p {
         font-size: 16px;
-      
+
       }
-      
-      .about-achievement{
+
+      .about-achievements{
         margin-top: 8vw;
-        margin-right:4vw;
-       justify-content: space-between; 
+       justify-content: space-between;
+       align-items: start;
+       /* border:4px solid white */
       }
       .about-achievement p{
         margin-left:5vh;
         font-size:16px;
       }
+
     }
-  
-  
+

@@ -67,7 +67,7 @@ const Touch = () => {
                 <input type="email" name='email'  className='p-4 mb-3 w-[40vw] rounded-md border-white w-80 mt-3 text-gray-300'  placeholder='Enter Your mail Here' />
                 <label htmlFor="" className=' textArea   text-gray-300  text-[15px] ' >Write your message here</label>
                 <textarea name="message"    className=' p-[25px]  w-[450px] rounded-[4px] border-white w-80 mt-3 text-gray-300'  placeholder='Enter Your Message' rows={8} ></textarea>
-                <button type='submit' className='contact-submit whitespace-nowrap md:ml-[11vh] ml-[5px] text-[17px] font-normal  mt-[5vh]  hover:scale-[1.06] duration-500 py-3 px-7 rounded-[50px]  '  >Submit here</button>
+                <button type='submit' className='contact-submit whitespace-nowrap  text-[17px] font-normal  mt-[5vh]  hover:scale-[1.06] duration-500 py-3 px-7 rounded-[50px]  '  >Submit here</button>
                </form>
             </div>
         </div>
@@ -85,7 +85,7 @@ const Touch = () => {
                 <button  className=' px-[35px] py-[15px] mb-5 bg-gradient-to-r from-[#DA7C25] to-[#B923E1] rounded-[30px] items-center hover:scale-[1.05] duration-300  text-[15px] ' >Subscribe</button>
                 </div>
             </div>
-            <div  className='footer  mb-[-10vh] ' >
+            <div  className='footer  ' >
                 <div className='border'  ></div>
                 <div className='ft-last flex item-center justify-between  ' >
                     <div  className='rights  mt-11 ' >
