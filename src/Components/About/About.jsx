@@ -52,7 +52,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="about-achievements flex items-center justify-around w-[100%] mb-[80px] transition 0.5s ">
+      <div className="about-achievements flex items-center justify-around w-screen mb-[80px] transition 0.5s ">
         <div className="about-achievement flex flex-col items-center  hover:scale-[1.1]">
           <h1 className="font-bold mb-2 hover:scale-[1.1] ">1+</h1>
           <p className="font-medium hover:scale-[1.1] ">YEARS OF EXPERIENCE</p>
