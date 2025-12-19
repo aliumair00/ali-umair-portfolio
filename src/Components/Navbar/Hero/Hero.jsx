@@ -1,49 +1,82 @@
 import React from 'react';
-import './Hero.css';
 import { RiLinkedinBoxFill } from "react-icons/ri";
 import { BsGithub } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import profile_img from '/public/ali.jpeg'
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <div id='home' className='hero flex items-center flex-col'>
-      <div className='profile'>
-        <img className='img h-full w-full mt-[20px]' src={profile_img} alt=""/>
-      </div>
-      <div className='socialicon mt-[50px] flex items-center gap-[10px]'>
-        <div className='linkedin h-[45px] w-[45px] rounded-full flex items-center justify-center'>
-          <a className='pointer' href="https://www.linkedin.com/in/ali-umair-6a93432b2/">
-            <RiLinkedinBoxFill className='text-[35px] font-bold hover:scale-[1.3] duration-500 transition 0.3s'/>
+    <div id='home' className='flex items-center flex-col px-5 md:px-0 text-center md:text-left'>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className='w-[150px] h-[150px] md:w-[250px] md:h-[250px] mx-auto md:mx-0'
+      >
+        <img className='rounded-full object-cover object-top h-full w-full mt-[20px]' src={profile_img} alt="" />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className='mt-[30px] md:mt-[50px] flex items-center justify-center md:justify-start gap-[10px]'
+      >
+        <div className='h-[35px] w-[35px] md:h-[45px] md:w-[45px] rounded-full flex items-center justify-center'>
+          <a className='cursor-pointer' href="https://www.linkedin.com/in/ali-umair-6a93432b2/">
+            <RiLinkedinBoxFill className='text-[25px] md:text-[35px] font-bold hover:scale-[1.3] duration-500 transition-transform' />
           </a>
         </div>
-        <div className='git h-[45px] w-[45px] rounded-full flex items-center justify-center'>
-          <a className='pointer' href="https://github.com/aliumair00">
-            <BsGithub className='text-[35px] font-bold hover:scale-[1.3] duration-500 transition 0.3s'/>
+        <div className='h-[35px] w-[35px] md:h-[45px] md:w-[45px] rounded-full flex items-center justify-center'>
+          <a className='cursor-pointer' href="https://github.com/aliumair00">
+            <BsGithub className='text-[25px] md:text-[35px] font-bold hover:scale-[1.3] duration-500 transition-transform' />
           </a>
         </div>
-        <div className='git h-[45px] w-[45px] rounded-full flex items-center justify-center'>
-          <a className='pointer' href="https://www.instagram.com/ali_hun_beyy/?hl=en">
-            <FaInstagram className='text-[35px] font-bold hover:scale-[1.3] duration-500 transition 0.3s'/>
+        <div className='h-[35px] w-[35px] md:h-[45px] md:w-[45px] rounded-full flex items-center justify-center'>
+          <a className='cursor-pointer' href="https://www.instagram.com/ali_hun_beyy/?hl=en">
+            <FaInstagram className='text-[25px] md:text-[35px] font-bold hover:scale-[1.3] duration-500 transition-transform' />
           </a>
         </div>
-      </div>
-      <h1 className='text-[50px] tracking-[2px] font-bold items-center'>
-        <span className='intro'>I'm Ali Umair,</span>MERN STACK DEVELOPER.
-      </h1>
-      <p className='ml-[5vw] mt-[10px] leading-loose items-center text-[18px]'>
-        I am a MERN stack developer specializing in dynamic web applications. With expertise in MongoDB, Express.js, React, and Node.js,<br/> 
+      </motion.div>
+
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className='text-[24px] md:text-[50px] tracking-[2px] font-bold items-center my-5 md:my-0'
+      >
+        <span className='bg-gradient-to-r from-[#DA7C25] to-[#B415FF] bg-clip-text text-transparent'>I'm Ali Umair,</span> MERN STACK DEVELOPER.
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.7 }}
+        className='md:ml-[5vw] my-[10px] leading-loose items-center text-[16px] md:text-[18px]'
+      >
+        I am a MERN stack developer specializing in dynamic web applications. With expertise in MongoDB, Express.js, React, and Node.js,<br className="hidden md:block" />
         I create innovative solutions and maintainable code. Let's connect and build something amazing together!
-      </p>
-      <div className='hero-action mt-[30px] mr-18 items-center gap-[25px] flex'>
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.9 }}
+        className='mt-[30px] md:mr-18 items-center gap-[15px] md:gap-[25px] flex flex-col md:flex-row'
+      >
         <AnchorLink href='#contact' offset={50}>
-          <button className='contactBtn'>Connect with me</button>
+          <button className='px-[20px] py-[10px] md:px-[30px] md:py-[18px] bg-gradient-to-r from-[#DA7C25] to-[#B415FF] rounded-[50px] cursor-pointer transition-all duration-100 border-2 border-transparent hover:border-white text-[14px] md:text-base'>
+            Connect with me
+          </button>
         </AnchorLink>
-        <a href="/public/CV.pdf" download>
-          <button className='resumeBtn pointer'>My resume</button>
+        <a href="/AliUmair-CV.pdf" download>
+          <button className='px-[20px] py-[10px] md:px-[45px] md:py-[18px] border-2 border-white rounded-[50px] cursor-pointer transition-all duration-300 hover:border-[#B415FF] text-[14px] md:text-base'>
+            My resume
+          </button>
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -1,21 +1,22 @@
 import React, { useRef, useState } from 'react';
-import './navbar.css';
 import Underline from '/src/assets/nav_underline.svg';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import menu_open from '/src/assets/menu_open.svg';
 import menu_close from '/src/assets/menu_close.svg';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef();
 
   const menuOpen = () => {
-    menuRef.current.style.right = "0";
+    setIsMenuOpen(true);
     document.body.style.overflow = "hidden";
   };
 
   const menuClose = () => {
-    menuRef.current.style.right = "-100%";
+    setIsMenuOpen(false);
     document.body.style.overflow = "auto";
   };
 
@@ -25,42 +26,60 @@ const Navbar = () => {
   };
 
   return (
-    <div className='navbar flex items-center justify-between relative'>
-      <h1 className='logo font-bold text-[3.5vw] whitespace-nowrap'>Ali Umair</h1>
-      <img src={menu_open} alt="" onClick={menuOpen} className='nav-mob-open lg:hidden' />
-      <ul ref={menuRef} className='nav-menu flex gap-9 text-[18px] cursor-pointer list-none'>
-        <img src={menu_close} onClick={menuClose} alt='' className='nav-mob-close' />
-        <li>
-          <AnchorLink href="#home">
-            <p onClick={() => handleMenuItemClick("home")} className='whitespace-nowrap'>Home</p>
-          </AnchorLink>
-          {menu === "home" ? <img src={Underline} alt="underline" /> : <></>}
-        </li>
-        <li>
-          <AnchorLink href="#about" offset={50}>
-            <p onClick={() => handleMenuItemClick("about")} className='whitespace-nowrap'>About me</p>
-          </AnchorLink>
-          {menu === "about" ? <img src={Underline} alt="underline" /> : <></>}
-        </li>
-        <li>
-          <AnchorLink href="#work" offset={50}>
-            <p onClick={() => handleMenuItemClick("work")} className='whitespace-nowrap'>Portfolio</p>
-          </AnchorLink>
-          {menu === "work" ? <img src={Underline} alt="underline" /> : <></>}
-        </li>
-        <li>
-          <AnchorLink href="#contact" offset={50}>
-            <p onClick={() => handleMenuItemClick("contact")} className='whitespace-nowrap'>Contact</p>
-          </AnchorLink>
-          {menu === "contact" ? <img src={Underline} alt="underline" /> : <></>}
-        </li>
+    <motion.div
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className='flex items-center justify-between mx-[50px] my-[40px] md:mx-[8vw] md:my-[20px] relative'
+    >
+      <h1 className='font-bold text-[3.5vw] whitespace-nowrap bg-gradient-to-r from-[#DA7C25] to-[#B923E1] bg-clip-text text-transparent'>Ali Umair</h1>
+
+      <img
+        src={menu_open}
+        alt=""
+        onClick={menuOpen}
+        className='block md:hidden fixed right-[30px] top-[30px] cursor-pointer z-10'
+      />
+
+      {/* Backdrop for click-outside */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 block md:hidden transition-opacity duration-500"
+          onClick={menuClose}
+        />
+      )}
+
+      <ul
+        ref={menuRef}
+        className={`flex flex-col items-start gap-[30px] bg-[#1F0016] w-[360px] h-full z-50 transition-all duration-500 fixed top-0 ${isMenuOpen ? 'right-0' : '-right-full'} md:static md:flex-row md:items-center md:gap-9 md:bg-transparent md:w-auto md:h-auto md:transition-none text-[18px] cursor-pointer list-none`}
+      >
+        <img
+          src={menu_close}
+          onClick={menuClose}
+          alt=''
+          className='block md:hidden relative top-[30px] left-[290px] w-[30px] cursor-pointer'
+        />
+
+        {["home", "about", "services", "work", "contact"].map((item) => (
+          <li key={item} className='flex gap-[20px] text-[30px] pl-[100px] md:p-0 md:text-[18px] md:flex-col md:gap-[5px]'>
+            <AnchorLink href={`#${item}`} offset={50}>
+              <p onClick={() => handleMenuItemClick(item)} className='whitespace-nowrap capitalize'>
+                {item === "about" ? "About me" : item === "work" ? "Portfolio" : item}
+              </p>
+            </AnchorLink>
+            {menu === item && <img src={Underline} alt="underline" className='mx-auto hidden md:flex' />}
+          </li>
+        ))}
       </ul>
-      <div className='btn pointer text-[18px] hover:scale-[1.05] transition 0.8s lg:flex hidden'>
+
+      <div className='hidden md:flex items-center gap-[20px]'>
         <AnchorLink href='#contact' offset={50}>
-          <button>Contact With Me</button>
+          <button className='bg-gradient-to-r from-[#DA7C25] to-[#B923E1] rounded-[30px] px-[25px] py-[15px] hover:scale-[1.05] transition-transform duration-500 cursor-pointer text-[18px]'>
+            Contact With Me
+          </button>
         </AnchorLink>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
