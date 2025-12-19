@@ -30,7 +30,7 @@ const Navbar = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className='flex items-center justify-between mx-[50px] my-[40px] md:mx-[8vw] md:my-[20px] relative'
+      className='flex items-center justify-between px-[50px] py-[40px] md:px-[8vw] md:py-[20px] absolute top-0 w-full z-50'
     >
       <h1 className='font-bold text-[3.5vw] whitespace-nowrap bg-gradient-to-r from-[#DA7C25] to-[#B923E1] bg-clip-text text-transparent'>Ali Umair</h1>
 

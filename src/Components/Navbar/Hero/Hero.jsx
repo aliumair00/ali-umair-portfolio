@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { RiLinkedinBoxFill } from "react-icons/ri";
 import { BsGithub } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
@@ -8,18 +8,29 @@ import { motion } from 'framer-motion';
 import LightRays from './LightRays';
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile(); // Check on mount
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
-    <div id='home' className='relative flex items-center flex-col px-5 md:px-0 text-center md:text-left'>
+    <div id='home' className='relative pt-[120px] flex items-center flex-col px-5 md:px-0 text-center md:text-left'>
       {/* LightRays Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <LightRays
           raysOrigin="top-center"
           raysColor="#f0f5f5ff"
-          raysSpeed={1.5}
-          lightSpread={0.8}
-          rayLength={1.2}
-          followMouse={true}
-          mouseInfluence={0.1}
+          raysSpeed={isMobile ? 2.0 : 1.5}
+          lightSpread={isMobile ? 2.0 : 0.8}
+          rayLength={isMobile ? 1.5 : 1.2}
+          followMouse={!isMobile}
+          mouseInfluence={isMobile ? 0 : 0.1}
           noiseAmount={0.1}
           distortion={0.05}
           className="custom-rays w-full h-full"
