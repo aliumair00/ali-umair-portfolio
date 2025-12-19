@@ -58,7 +58,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full hidden md:block md:w-1/2 h-80 md:h-[450px] overflow-hidden rounded-2xl relative group perspective-1000"
+          className="w-full hidden md:block md:w-1/3 h-80 md:h-[450px] overflow-hidden rounded-2xl relative group perspective-1000"
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
@@ -72,7 +72,8 @@ const About = () => {
             <img
               src={dp}
               alt="About"
-              className="object-cover object-top w-full h-full transform scale-100 group-hover:scale-100 transition-transform duration-500 "
+              className="object-cover w-full h-full transform scale-100 group-hover:scale-100 transition-transform duration-500 "
+              style={{ objectPosition: "50% 50%" }}
             />
             {/* Subtle Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
@@ -90,34 +91,37 @@ const About = () => {
 
           <div className="flex flex-col gap-4 text-base font-medium leading-relaxed">
             <p>
-              I am an experienced Frontend Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.
+              I am an experienced Mern Stack Developer with over a decade of professional expertise in the field. Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing to their success and growth.
             </p>
             <p>
-              My passion for frontend development is not only reflected in my extensive experience but also in the enthusiasm and dedication I bring to each project.
+              My passion for Mern Stack  development is not only reflected in my extensive experience but also in the enthusiasm and dedication I bring to each project.
             </p>
           </div>
 
           {/* Skills */}
           <div className="flex flex-col gap-4">
             {[
-              { name: 'HTML & CSS', width: 'w-[80%]' },
-              { name: 'Javascript', width: 'w-[65%]' },
-              { name: 'React.js', width: 'w-[60%]' },
-              { name: 'Express.js', width: 'w-[70%]' },
-              { name: 'Node.js', width: 'w-[80%]' },
+              { name: 'HTML & Tailwind CSS', width: 'w-[100%]' },
+              { name: 'Javascript', width: 'w-[80%]' },
+              { name: 'React.js', width: 'w-[80%]' },
+              { name: 'Express.js', width: 'w-[75%]' },
+              { name: 'Node.js', width: 'w-[75%]' },
             ].map((skill, i) => (
               <div
                 key={i}
                 className="flex items-center gap-5 hover:scale-105 transition-transform duration-300"
               >
                 <p className="min-w-[120px] text-[17px] font-medium">{skill.name}</p>
-                <motion.div
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: 0.2 + (i * 0.1) }}
-                  className={`h-[7px] rounded-full bg-gradient-to-r from-[#df8908] to-[#b415ff] origin-left ${skill.width}`}
-                ></motion.div>
+                <div className="flex-1">
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.2 + (i * 0.1) }}
+                    className="h-[7px] rounded-full bg-gradient-to-r from-[#df8908] to-[#b415ff] origin-left"
+                    style={{ width: skill.width.replace("w-[", "").replace("]", "") }}
+                  ></motion.div>
+                </div>
               </div>
             ))}
           </div>
@@ -125,7 +129,7 @@ const About = () => {
       </div>
 
       {/* Achievements */}
-      <div className="flex sm:flex-row justify-around items-center w-full gap-10 mt-10">
+      <div className="flex flex-col md:flex-row justify-around items-center w-full gap-10 mt-10">
         {[
           { number: '2+', text: 'YEARS OF EXPERIENCE' },
           { number: '5+', text: 'PROJECTS COMPLETED' },

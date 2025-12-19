@@ -95,7 +95,7 @@ const Touch = () => {
             <div className='relative flex items-center justify-between mt-[80px] max-md:mt-[60px] max-md:border-t max-md:border-[#333] max-md:pt-[30px] max-md:flex-col'>
                 <div className='relative max-md:text-center'>
                     <h1 className='text-[55px] font-bold relative max-md:text-[40px] max-md:mb-[10px] max-[480px]:text-[32px]'>Ali</h1>
-                    <img src={theme_pattern} alt="" className='w-[60px] absolute top-11 left-[44%] md:w-[80px] md:left-0 md:z-[-2] ' />
+                    <img src={theme_pattern} alt="" className='w-[60px] absolute top-8 left-[44%] md:w-[80px] md:left-0 md:z-[-2] ' />
                     <p className='font-medium text-[16px]'>I am a Mern Stack developer from, Pakistan with 3 years of experience.</p>
                 </div>
                 <div className='flex items-center gap-[20px] justify-center max-md:hidden'>
@@ -110,7 +110,7 @@ const Touch = () => {
                 <div className='border-t-[1px] border-solid border-white/50 my-[20px] max-md:hidden'></div>
                 <div className='flex items-center justify-between py-6 max-md:flex-col max-md:text-center max-md:gap-[15px]'>
                     <div className='text-[14px] text-[#888]'>
-                        <h2>© 2023 Ali Umair. All rights reserved.</h2>
+                        <h2>© 2025 Ali Umair. All rights reserved.</h2>
                     </div>
                     <div className='flex gap-[40px] items-center max-md:justify-center max-md:gap-[20px] max-md:text-[14px]'>
                         <div><a href="" className='text-[#f1f1f1] header-link no-underline max-md:text-[#888]'>Term of Services</a></div>
