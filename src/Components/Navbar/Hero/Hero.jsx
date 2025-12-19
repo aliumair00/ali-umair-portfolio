@@ -27,8 +27,8 @@ const Hero = () => {
           raysOrigin="top-center"
           raysColor="#f0f5f5ff"
           raysSpeed={isMobile ? 2.0 : 1.5}
-          lightSpread={isMobile ? 2.0 : 0.8}
-          rayLength={isMobile ? 1.5 : 1.2}
+          lightSpread={isMobile ? 1.5 : 0.8}
+          rayLength={isMobile ? 8.0 : 1.2}
           followMouse={!isMobile}
           mouseInfluence={isMobile ? 0 : 0.1}
           noiseAmount={0.1}
