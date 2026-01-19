@@ -6,25 +6,25 @@ import w_5 from '/public/w5.png'
 const mywork_data = [
     {
         w_no: 1,
-        w_name: "Web design",
+        w_name: "Gym Center",
         w_img: w_1,
         w_link: "https://apexcify-technologys-gym-center-man.vercel.app/"
     },
     {
         w_no: 2,
-        w_name: "Web design",
+        w_name: "Social Media",
         w_img: w_2,
         w_link: "https://apexcify-technologys-mini-social-me.vercel.app/login"
     },
     {
         w_no: 3,
-        w_name: "Web design",
+        w_name: "tution management",
         w_img: w_3,
-        w_link: "https://apexcify-technologys-tuition-manage.vercel.app/login"
+        w_link: "https://tuition-management-system-3ozu.vercel.app/login"
     },
     {
         w_no: 4,
-        w_name: "Web design",
+        w_name: "quiz website",
         w_img: w_4,
         w_link: "https://quiz-app-livid-three-56.vercel.app/"
     },
