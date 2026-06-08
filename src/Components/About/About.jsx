@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import theme_pattern from '/src/assets/theme_pattern.svg'
-import dp from "/public/dp.jpg"
+const dp = "/dp.JPG";
 import { motion } from 'framer-motion';
 
 const About = () => {

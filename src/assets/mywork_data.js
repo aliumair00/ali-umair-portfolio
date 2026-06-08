@@ -1,8 +1,8 @@
-import w_1 from '/public//w1.png'
-import w_2 from '/public/w2.png'
-import w_3 from '/public/w3.png'
-import w_4 from '/public/w4.png'
-import w_5 from '/public/w5.png'
+const w_1 = '/w1.png';
+const w_2 = '/w2.png';
+const w_3 = '/w3.png';
+const w_4 = '/w4.png';
+const w_5 = '/w5.png';
 const mywork_data = [
     {
         w_no: 1,

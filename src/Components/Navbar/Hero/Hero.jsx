@@ -3,7 +3,7 @@ import { RiLinkedinBoxFill } from "react-icons/ri";
 import { BsGithub } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import profile_img from '/public/ali.jpeg'
+const profile_img = '/ali.jpeg';
 import { motion } from 'framer-motion';
 import LightRays from './LightRays';
 
@@ -99,7 +99,7 @@ const Hero = () => {
             Connect with me
           </button>
         </AnchorLink>
-        <a href="/AliUmair-CV.pdf" download>
+        <a href="/Ali%20(Mern%20Stack%20Developer).pdf" download>
           <button className='px-[20px] py-[10px] md:px-[45px] md:py-[18px] border-2 border-white rounded-[50px] cursor-pointer transition-all duration-300 hover:border-[#B415FF] text-[14px] md:text-base'>
             My resume
           </button>
